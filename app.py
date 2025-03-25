@@ -4,7 +4,7 @@ from flask_cors import CORS  # Import CORS
 import google.generativeai as genai
 
 # Set up API key
-genai.configure(api_key=" ")  # Replace with your actual API key
+genai.configure(api_key=" ")  # Replace with your actual API key b4 running the code or else the chatbot will show error
 
 MODEL_NAME = "models/gemini-2.0-pro-exp" 
 model = genai.GenerativeModel(MODEL_NAME)
