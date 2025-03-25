@@ -1,0 +1,85 @@
+# Elegant Chatbot
+
+## Overview
+Elegant Chatbot is a web-based chatbot powered by Google Gemini AI. It features a sleek and modern UI, allowing users to interact with the chatbot effortlessly. The backend is built using Flask, integrating Google Generative AI to provide responses.
+
+## Features
+- Interactive chatbot interface with a clean and elegant UI
+- Real-time messaging
+- Backend powered by Flask
+- Integration with Google Gemini AI for responses
+- CORS enabled for cross-origin requests
+
+## Technologies Used
+### Frontend:
+- HTML, CSS, JavaScript
+- Fetch API for AJAX requests
+
+### Backend:
+- Flask (Python web framework)
+- Flask-CORS for cross-origin requests
+- Google Generative AI API
+
+## Installation and Setup
+
+### Prerequisites
+Make sure you have the following installed:
+- Python (>=3.7)
+- Flask (`pip install flask`)
+- Flask-CORS (`pip install flask-cors`)
+
+### Steps to Run the Project
+
+#### 1. Clone the Repository
+```sh
+git clone <repository_url>
+cd <repository_folder>
+```
+
+#### 2. Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+*(If `requirements.txt` is not available, manually install Flask and Flask-CORS.)*
+
+#### 3. Configure Google Generative AI API
+- Get your API key from Google Generative AI.
+- Replace `YOUR_API_KEY_HERE` in `app.py`:
+  ```python
+  genai.configure(api_key="YOUR_API_KEY_HERE")
+  ```
+
+#### 4. Run the Flask Server
+```sh
+python app.py
+```
+The server will start at `http://127.0.0.1:5000/`
+
+#### 5. Open the Chatbot Interface
+- Open `index.html` in a browser.
+- Start chatting with the bot!
+
+## API Endpoint
+### POST `/chatbot`
+**Request:**
+```json
+{
+    "message": "Hello, chatbot!"
+}
+```
+**Response:**
+```json
+{
+    "response": "Hello! How can I assist you today?"
+}
+```
+
+## Troubleshooting
+- If you get a CORS error, ensure Flask-CORS is installed and enabled.
+- If the chatbot doesn’t respond, check API key validity and internet connectivity.
+- If Flask doesn’t start, ensure all dependencies are installed properly.
+
+## Future Improvements
+- Deploying the chatbot on a cloud server.
+- Adding authentication for API requests.
+- Improving UI/UX for a better user experience.
